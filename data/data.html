@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminación de Datos - Facebook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #3b5998;
+        }
+        button {
+            background-color: #3b5998;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2d4373;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Solicitud de Eliminación de Datos</h1>
+        <p>Si deseas eliminar los datos asociados a nuestra aplicación de Facebook, haz clic en el siguiente botón.</p>
+        <button onclick="deleteFacebookData()">Eliminar mis datos</button>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        function deleteFacebookData() {
+            // Simula una solicitud de eliminación de datos
+            fetch("https://tudominio.com/api/delete-facebook-data", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ user_id: "USER_ID_DE_EJEMPLO" }) // Debes obtener el ID del usuario autenticado
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("response").innerText = "Tu solicitud ha sido recibida. Se eliminarán los datos en breve.";
+            })
+            .catch(error => {
+                document.getElementById("response").innerText = "Hubo un error al procesar la solicitud.";
+            });
+        }
+    </script>
+
+</body>
+</html>
