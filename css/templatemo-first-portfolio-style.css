@@ -1085,7 +1085,7 @@ strong {
 
   .about-thumb {
     padding-right: 0;
-    padding-left: 0;
+    /* padding-left: 0; */
   }
 
   .about-numbers {
