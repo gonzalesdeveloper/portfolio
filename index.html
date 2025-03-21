@@ -79,7 +79,7 @@
                     <div class="d-lg-flex align-items-center d-none ms-auto">
                         <i class="navbar-icon bi-telephone-plus me-3"></i>
                         <a class="custom-btn btn" href="#section_5">
-                            +51 965994514
+                            965994514
                         </a>
                     </div>
                 </div>
@@ -612,7 +612,7 @@
                             </div>
 
                             <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                                <form action="#" method="get" class="custom-form contact-form" role="form">
+                                <form action="https://formsubmit.co/sofcargonzales@gmail.com" method="post" class="custom-form contact-form" role="form">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-12">
                                             <div class="form-floating">
@@ -722,6 +722,32 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/magnific-popup-options.js"></script>
         <script src="js/custom.js"></script>
+
+        <!-- emailjs -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <script>
+            document.getElementById("miFormulario").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                emailjs.init("service_zs9zoz9"); // Reemplaza con tu User ID de EmailJS
+
+                let templateParams = {
+                    title: "Quiero cotizar un proyecto",
+                    nombres: document.getElementById("name").value,
+                    correo: document.getElementById("email").value,
+                    descripcion: document.getElementById("message").value
+                };
+
+                emailjs.send("service_zs9zoz9", "template_j2grgtv", templateParams)
+                .then(response => {
+                    alert("Correo enviado con éxito");
+                }, error => {
+                    console.error("Error al enviar el correo", error);
+                });
+            });
+
+        </script>
 
     </body>
 </html>
