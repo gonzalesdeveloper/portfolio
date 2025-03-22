@@ -727,7 +727,12 @@
         <script src="js/custom.js"></script>
 
         <script>
-            emailjs.init("LhSiSikfLIX5w56-O"); // Reemplaza con la clave real
+            document.addEventListener("DOMContentLoaded", function () {
+                emailjs.init("LhSiSikfLIX5w56-O"); // Asegúrate de que sea la clave pública correcta
+                console.log("EmailJS inicializado correctamente");
+            });
+
+           /*  emailjs.init("LhSiSikfLIX5w56-O"); */ // Reemplaza con la clave real
 
             document.getElementById("form-contact").addEventListener("submit", function(event) {
                 event.preventDefault();
