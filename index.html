@@ -29,6 +29,13 @@
 
         <!-- emailjs -->
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                emailjs.init("LhSiSikfLIX5w56-O"); // Asegúrate de que sea la clave pública correcta
+                console.log("EmailJS inicializado correctamente");
+            });
+        </script>
         
     </head>
     
@@ -727,10 +734,6 @@
         <script src="js/custom.js"></script>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                emailjs.init("LhSiSikfLIX5w56-O"); // Asegúrate de que sea la clave pública correcta
-                console.log("EmailJS inicializado correctamente");
-            });
 
            /*  emailjs.init("LhSiSikfLIX5w56-O"); */ // Reemplaza con la clave real
 
