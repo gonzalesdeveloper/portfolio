@@ -638,8 +638,8 @@ strong {
 
 .services-thumb-up {
   position: relative;
-  bottom: 50px;
-  margin-bottom: -50px;
+  /* bottom: 50px; */
+  /* margin-bottom: -50px; */
 }
 
 .services-thumb:hover {
@@ -1178,5 +1178,10 @@ strong {
   .hero-image {
     min-width: inherit;
   }
+}
+
+
+.txt-justify{
+  text-align: justify;
 }
 
