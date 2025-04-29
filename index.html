@@ -26,16 +26,6 @@
         <link href="css/magnific-popup.css" rel="stylesheet">
 
         <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
-
-        <!-- emailjs -->
-        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                emailjs.init("LhSiSikfLIX5w56-O"); // Asegúrate de que sea la clave pública correcta
-                console.log("EmailJS inicializado correctamente");
-            });
-        </script>
         
     </head>
     
@@ -770,31 +760,5 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/magnific-popup-options.js"></script>
         <script src="js/custom.js"></script>
-
-       <!--  <script>
-
-           /*  emailjs.init("LhSiSikfLIX5w56-O"); */ // Reemplaza con la clave real
-
-            document.getElementById("form-contact").addEventListener("submit", function(event) {
-                event.preventDefault();
-
-                emailjs.init("service_zs9zoz9"); // Reemplaza con tu User ID de EmailJS
-
-                let templateParams = {
-                    nombres: document.getElementById("name").value,
-                    correo: document.getElementById("email").value,
-                    descripcion: document.getElementById("message").value
-                };
-
-                emailjs.send("service_zs9zoz9", "template_j2grgtv", templateParams)
-                .then(response => {
-                    alert("Correo enviado con éxito");
-                }, error => {
-                    console.error("Error al enviar el correo", error);
-                });
-            });
-
-        </script> -->
-
     </body>
 </html>
